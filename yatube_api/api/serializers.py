@@ -59,11 +59,3 @@ class FollowSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 'Нельзя подписаться на самого себя!')
         return data
-    """
-
-    def validate_following(self, value):
-        print('!!!!!!!!!!', serializers.CurrentUserDefault(), '=====', value)
-        if value == serializers.CurrentUserDefault():
-            raise serializers.ValidationError('Проверьте год рождения!')
-        return value
-    """
